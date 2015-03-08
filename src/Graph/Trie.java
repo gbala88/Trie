@@ -29,6 +29,10 @@ class Node {
 		}
 		return null;	
 	}
+	
+	public void add(Node n) {
+		next.add(n);
+	}
 }
 
 public class Trie {
@@ -40,7 +44,7 @@ public class Trie {
 			for(int i=0;i<s.length();i++) {
 				if(temp.contains(s.charAt(i))==false) // Lower case stuff
 				{
-					temp.next.add(new Node(s.charAt(i)));
+					temp.add(new Node(s.charAt(i)));
 				}
 				temp = temp.get(s.charAt(i));
 			}
